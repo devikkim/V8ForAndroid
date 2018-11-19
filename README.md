@@ -121,7 +121,7 @@ app
    -- include
 ```
 
-2. edit CMakeLists.txt
+2. edit CMakeLists.txt file
 ```
 cmake_minimum_required(VERSION 3.4.1)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
@@ -138,3 +138,37 @@ target_include_directories( native-lib PRIVATE ${CMAKE_SOURCE_DIR}/libs/include 
 target_link_libraries( native-lib v8_base v8_nosnapshot log )
 
 ```
+
+3. add cmake option in build.gragle
+```
+cmake {
+    cppFlags "-std=c++11 -frtti -fexceptions"
+    abiFilters 'x86', 'armeabi-v7a', 'arm64-v8a'
+    arguments "-DANDROID_UNIFIED_HEADERS=ON"
+}
+```
+
+4. add function in native-lib.cpp
+```
+// return value is version of v8
+Java_com_leibniz55_v8test_MainActivity_getVersion(
+        JNIEnv *env,
+        jobject /* this */) {
+    const char* utfString = v8::V8::GetVersion();
+    return env->NewStringUTF(utfString);
+}
+```
+
+5. add native java function in MainActivity
+```
+public native String getVersion();
+```
+6. call `getVersion()`
+```
+TextView tv = (TextView) findViewById(R.id.sample_text);
+tv.setText(getVersion());
+```
+
+7. run application 
+> version of v8 will appear on the screen.
+
