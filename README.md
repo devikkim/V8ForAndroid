@@ -2,7 +2,7 @@
 V8 build setting for android (arm, arm64, x86) on Linux (Ubuntu).
 
 
-### set dependencies (on Linux:ubuntu)
+### Set dependencies (on Linux:ubuntu)
 
 1. get depot tools [more](https://www.chromium.org/developers/how-tos/install-depot-tools) :
 ```
@@ -16,7 +16,7 @@ export PATH=`pwd`/depot_tools:"$PATH"
 sudo apt-get install curl libc6-dev-i386 g++-multilib
 ```
 
-### compile v8 on linux (ubuntu)
+### Compile v8 on linux (ubuntu)
 
 1. install v8 (checkout version)
 ```
@@ -109,7 +109,11 @@ cp -R ../../../../include ./
 
 8. Make sure the file has been created in `path/to/v8/out.gn/<one_of_list>/obj/libs/`
 
-### create android NDK project (It is assumed that you have compiled armeabi-v7a, arm64-v8a, x86.)
+
+
+
+### Create android NDK project
+It is assumed that you have compiled armeabi-v7a, arm64-v8a, x86.
 
 1. import `include`, `armeabi-v7a`, `arm64-v8a`, `x86`, `include` folder
 ```
@@ -126,9 +130,11 @@ app
 cmake_minimum_required(VERSION 3.4.1)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
 
+// import libv8_base.a called v8_base
 add_library( v8_base STATIC IMPORTED )
 set_target_properties( v8_base PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI}/libv8_base.a )
 
+// import libv8_nosnapshot.a called v8_nosnapshot
 add_library( v8_nosnapshot STATIC IMPORTED )
 set_target_properties( v8_nosnapshot PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI}/libv8_nosnapshot.a )
 
@@ -162,6 +168,7 @@ Java_com_leibniz55_v8test_MainActivity_getVersion(
 5. add native java function in MainActivity
 ```
 public native String getVersion();
+
 ```
 6. call `getVersion()`
 ```
