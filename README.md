@@ -108,3 +108,33 @@ cp -R ../../../../include ./
 ```
 
 8. Make sure the file has been created in `path/to/v8/out.gn/<one_of_list>/obj/libs/`
+
+### create android NDK project (It is assumed that you have compiled armeabi-v7a, arm64-v8a, x86.)
+
+1. import `include`, `armeabi-v7a`, `arm64-v8a`, `x86`, `include` folder
+```
+app
+-- libs
+   -- arm64-v8a
+   -- armeabi-v7a
+   -- x86
+   -- include
+```
+
+2. edit CMakeLists.txt
+```
+cmake_minimum_required(VERSION 3.4.1)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
+
+add_library( v8_base STATIC IMPORTED )
+set_target_properties( v8_base PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI}/libv8_base.a )
+
+add_library( v8_nosnapshot STATIC IMPORTED )
+set_target_properties( v8_nosnapshot PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI}/libv8_nosnapshot.a )
+
+add_library( native-lib SHARED src/main/cpp/kr_co_coocon_v8_V8Impl.cpp )
+target_include_directories( native-lib PRIVATE ${CMAKE_SOURCE_DIR}/libs/include )
+
+target_link_libraries( native-lib v8_base v8_nosnapshot log )
+
+```
