@@ -15,7 +15,10 @@ export PATH=`pwd`/depot_tools:"$PATH"
 ```
 sudo apt-get install curl libc6-dev-i386 g++-multilib
 ```
-3. install v8 (checkout version)
+
+### build v8
+
+1. install v8 (checkout version)
 ```
 fetch v8
 cd v8
@@ -23,12 +26,12 @@ git pull
 git checkout <v8_version>
 ```
 
-4. download android tools
+2. download android tools
 ```
 echo "target_os = ['android']" >> ../.gclient && gclient sync
 ```
 
-5. check v8gen.py list
+3. check v8gen.py list
 ```
 tools/dev/v8gen.py list
 ```
@@ -39,7 +42,7 @@ tools/dev/v8gen.py list
 tools/dev/v8gen.py gen <one_of_list>
 ```
 
-7. change `out.gn/<one_of_list>/args.gn`
+4. change `out.gn/<one_of_list>/args.gn`
 ```
 vi out.gn/<one_of_list>/args.gn
 ```
@@ -59,7 +62,7 @@ target_os = "android"
 v8_android_log_stdout = true
 ```
 
-8. execute ninja command for build
+5. execute ninja command for build
 ```
 ninja -C out.gn/<one_of_list> -j 4
 ```
