@@ -62,7 +62,35 @@ target_os = "android"
 v8_android_log_stdout = true
 ```
 
-5. execute ninja command for build
+5. compile target
 ```
 ninja -C out.gn/<one_of_list> -j 4
 ```
+
+6. create lib files
+```
+cd out.gn/<one_of_list>/obj
+mkdir libs
+cd libs
+ar -rcsD libv8_base.a ../v8_base/*.o
+ar -rcsD libv8_base.a ../v8_libbase/*.o
+ar -rcsD libv8_base.a ../v8_libsampler/*.o
+ar -rcsD libv8_base.a ../v8_libplatform/*.o 
+ar -rcsD libv8_base.a ../src/inspector/inspector/*.o
+ar -rcsD libv8_snapshot.a ../v8_snapshot/*.o 
+ar -rcsD libv8_nosnapshot.a ../v8_nosnapshot/*.o
+ar -rcsD libv8_external_snapshot.a ../v8_external_snapshot/*.o
+```
+> Maybe not all of the above files are created. But it does not matter. Only the `libv8_base.a` and `libv8_nosnapshot.a` files need to be created.
+
+7. source headers, for inspector compilation.
+copy v8 compliation header files
+```
+mkdir -p src/base/platform
+cp -R ../../../../src/*.h ./src
+cp -R ../../../../src/base/*.h ./src/base
+cp -R ../../../../src/base/platform/*.h ./src/base/platform
+cp -R ../../../../include ./
+```
+
+8. Make sure the file has been created in `path/to/v8/out.gn/<one_of_list>/obj/libs/`
