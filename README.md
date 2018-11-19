@@ -35,7 +35,21 @@ echo "target_os = ['android']" >> ../.gclient && gclient sync
 ```
 tools/dev/v8gen.py list
 ```
-> may be list up `arm.debug, arm.optdebug arm.release, arm64.debug...`
+> example :
+```
+arm.debug
+arm.optdebug
+arm.release
+arm64.debug
+arm64.optdebug
+arm64.release
+ia32.debug
+ia32.optdebug
+ia32.release
+x64.debug
+x64.optdebug
+x64.release
+```
 
 6. generate compilation target
 ```
