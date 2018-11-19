@@ -130,11 +130,11 @@ app
 cmake_minimum_required(VERSION 3.4.1)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
 
-// import libv8_base.a called v8_base
+# import libv8_base.a called v8_base
 add_library( v8_base STATIC IMPORTED )
 set_target_properties( v8_base PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI}/libv8_base.a )
 
-// import libv8_nosnapshot.a called v8_nosnapshot
+# import libv8_nosnapshot.a called v8_nosnapshot
 add_library( v8_nosnapshot STATIC IMPORTED )
 set_target_properties( v8_nosnapshot PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI}/libv8_nosnapshot.a )
 
@@ -177,5 +177,7 @@ tv.setText(getVersion());
 ```
 
 7. run application 
-> version of v8 will appear on the screen.
+```
+version of v8 will appear on the screen.
+```
 
