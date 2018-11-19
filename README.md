@@ -16,7 +16,7 @@ export PATH=`pwd`/depot_tools:"$PATH"
 sudo apt-get install curl libc6-dev-i386 g++-multilib
 ```
 
-### build v8
+### compile v8
 
 1. install v8 (checkout version)
 ```
