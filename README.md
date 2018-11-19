@@ -39,7 +39,7 @@ tools/dev/v8gen.py list
 tools/dev/v8gen.py gen <one_of_list>
 ```
 
-* change out.gn/<one_of_list>/args.gn
+* change `out.gn/<one_of_list>/args.gn`
 ```
-
+vi out.gn/<one_of_list>/args.gn
 ```
