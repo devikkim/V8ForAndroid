@@ -1,0 +1,16 @@
+Executable : /Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
+arguments : 
+-H/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app
+-B/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/release/armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-16
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/build/intermediates/cmake/release/obj/armeabi-v7a
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=/Users/InKwon/Library/Android/sdk/ndk-bundle
+-DCMAKE_CXX_FLAGS=-std=c++11 -frtti -fexceptions
+-DCMAKE_TOOLCHAIN_FILE=/Users/InKwon/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/ninja
+-GAndroid Gradle - Ninja
+-DANDROID_UNIFIED_HEADERS=ON
+jvmArgs : 
+

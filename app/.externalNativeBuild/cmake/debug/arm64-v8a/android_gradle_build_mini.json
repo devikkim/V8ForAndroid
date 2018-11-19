@@ -1,0 +1,26 @@
+{
+  "buildFiles": [
+    "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/debug/arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "v8_base-Debug-arm64-v8a": {
+      "artifactName": "v8_base",
+      "abi": "arm64-v8a",
+      "output": "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/libs/arm64-v8a/libv8_base.a"
+    },
+    "native-lib-Debug-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/debug/arm64-v8a --target native-lib",
+      "abi": "arm64-v8a",
+      "output": "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so"
+    },
+    "v8_nosnapshot-Debug-arm64-v8a": {
+      "artifactName": "v8_nosnapshot",
+      "abi": "arm64-v8a",
+      "output": "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/libs/arm64-v8a/libv8_nosnapshot.a"
+    }
+  }
+}

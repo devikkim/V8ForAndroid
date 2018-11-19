@@ -1,0 +1,3 @@
+/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/native-lib.dir

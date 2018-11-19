@@ -1,0 +1,57 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/.externalNativeBuild/cmake/debug/x86_64 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-lib-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/.externalNativeBuild/cmake/debug/x86_64 --target native-lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/Users/InKwon/Library/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/InKwon/Library/Android/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I../../../../libs/include -isystem /Users/InKwon/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /Users/InKwon/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/InKwon/Library/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "/Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so",
+			"toolchain" : "9900920395007910947"
+		},
+		"v8_base-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "v8_base",
+			"buildType" : "debug",
+			"output" : "/Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/libs/x86_64/libv8_base.a",
+			"toolchain" : "9900920395007910947"
+		},
+		"v8_nosnapshot-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "v8_nosnapshot",
+			"buildType" : "debug",
+			"output" : "/Users/InKwon/Documents/workspace/business/dev/v8-builder/v8test/app/libs/x86_64/libv8_nosnapshot.a",
+			"toolchain" : "9900920395007910947"
+		}
+	},
+	"toolchains" : 
+	{
+		"9900920395007910947" : 
+		{
+			"cCompilerExecutable" : "/Users/InKwon/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/InKwon/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

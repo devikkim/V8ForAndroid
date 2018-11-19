@@ -1,0 +1,26 @@
+{
+  "buildFiles": [
+    "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "v8_nosnapshot-Release-armeabi-v7a": {
+      "artifactName": "v8_nosnapshot",
+      "abi": "armeabi-v7a",
+      "output": "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/libs/armeabi-v7a/libv8_nosnapshot.a"
+    },
+    "native-lib-Release-armeabi-v7a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/InKwon/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/.externalNativeBuild/cmake/release/armeabi-v7a --target native-lib",
+      "abi": "armeabi-v7a",
+      "output": "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so"
+    },
+    "v8_base-Release-armeabi-v7a": {
+      "artifactName": "v8_base",
+      "abi": "armeabi-v7a",
+      "output": "/Users/InKwon/Documents/workspace/personal/dev/git/V8ForAndroid/app/libs/armeabi-v7a/libv8_base.a"
+    }
+  }
+}
