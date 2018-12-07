@@ -3,9 +3,9 @@ V8 build setting for android (arm, arm64, x86) on Linux (Ubuntu).
 
 [Complie V8 for Android](https://github.com/leibniz55/ComplieV8ForAndroid/blob/master/README.md)
 
-[V8](https://github.com/v8/v8
+[V8](https://github.com/v8/v8)
 
-)
+
 ### Create android NDK project
 It is assumed that you have compiled armeabi-v7a, arm64-v8a, x86.
 
