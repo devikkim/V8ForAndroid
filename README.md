@@ -75,3 +75,6 @@ tv.setText(getVersion());
 version of v8 will appear on the screen.
 ```
 
+### Author
+
+devikkim, devikkim@gmail.com
